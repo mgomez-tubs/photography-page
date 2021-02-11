@@ -5,7 +5,7 @@
                 <v-icon smallcolor="white" class="ma-2">mdi-close</v-icon>
             </v-btn>
         </div>
-    <v-row>
+    <v-row class="justify-center">
         <v-card
             class="d-inline-flex pa-2 ma-8 justify-center align-center delay" 
             :class="activeToolbarClass"
@@ -106,9 +106,7 @@ export default {
 .navigation-mode{
     position: fixed; 
     bottom:0px;
-    left:50%;
     width: 70em;
-    transform: translate(-50%,0);
 }
 
 .gallery-mode{

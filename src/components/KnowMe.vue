@@ -4,7 +4,7 @@
             <v-card class="pa-5" color="yellow lighten-4" v-show="show">
                 <v-card class="d-flex pa-2" elevation="10">
                     <v-img
-                        src="../assets/picture.jpg"
+                        asrc="../assets/picture.jpg"
                         width="15em"/>
                     <v-container fill-height fluid>
                         <v-row align="center" justify="center">
