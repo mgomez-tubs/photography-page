@@ -13,7 +13,8 @@
           tile
         >
           <div
-            class="text-center text-body-2 mx-10"
+            class="text-center text-body-1 mx-5"
+            style="min-width: 20em;"
             >
             GERALDO VALDÉZ FOTOGRAFÍA
           </div>
@@ -22,7 +23,7 @@
             small
             plain
             depressed
-            class="mx-2"
+            class="mx-1"
           >
           Acerca de mí
           </v-btn>
@@ -31,7 +32,7 @@
             small
             plain
             depressed
-            class="mx-2"
+            class="mx-1"
           >
           Galería
           </v-btn>
@@ -40,7 +41,7 @@
             small
             plain
             depressed
-            class="mx-2 text-center"
+            class="mx-1 text-center"
           >
           ¡Contáctame!
           </v-btn>
@@ -72,5 +73,8 @@ export default {
 </script>
 
 <style>
-  html { overflow-y: auto !important}
+  html { 
+    overflow-y: auto !important;
+    font-size: 12px;
+    }
 </style>

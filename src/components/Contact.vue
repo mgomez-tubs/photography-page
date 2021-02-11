@@ -20,8 +20,6 @@
                                 <v-btn small color="blue" fab><v-icon color="white">mdi-twitter</v-icon></v-btn>
                                 <v-btn small color="blue" fab><v-icon color="white">mdi-linkedin</v-icon></v-btn>
                             <br/>
-                             
-
                             </p>
 
                             </v-card>
