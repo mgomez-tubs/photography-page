@@ -11,7 +11,6 @@
     </template>
   </v-container>
 </template>
-
 <script>
 
 import Gallery  from './Galeria'
