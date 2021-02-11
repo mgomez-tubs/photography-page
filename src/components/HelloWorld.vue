@@ -1,5 +1,6 @@
 <template>
   <v-container fill-height>
+    <!-- Close gallery button-->
     <template v-if=       "currentPage == 'knowme'">
       <KnowMe/>
     </template>
@@ -29,8 +30,19 @@ import Contact  from './Contact'
     mounted(){
       // Set Menu bar listener
       this.$UIEvents.on("pageSelected", id=>{
-        this.currentPage = id;
-      })
+          switch(id){
+            case "gallery":
+              this.currentPage = id
+              
+              break;
+            case "knowme":
+              this.currentPage = id
+              break;
+            case "contact":
+              this.currentPage = id
+              break;
+          }
+        })
     }
   }
 </script>
