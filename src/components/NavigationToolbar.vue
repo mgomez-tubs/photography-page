@@ -5,63 +5,56 @@
                 <v-icon smallcolor="white" class="ma-2">mdi-close</v-icon>
             </v-btn>
         </div>
-    <v-row class="justify-center">
-        <v-card
-            class="d-inline-flex pa-2 ma-8 justify-center align-center delay" 
-            :class="activeToolbarClass"
-            tile
-        >
-            <!--Navigation Mode-->
-            <template v-if="!galleryMode">
-                <div
-                class="text-center text-body-1 mx-5"
-                style="min-width: 20em;"
-                >
-                GERALDO VALDÉZ FOTOGRAFÍA
-                </div>
-                <v-btn
-                @click="$UIEvents.emit('pageSelected','knowme')"
-                small
-                plain
-                depressed
-                class="mx-1"
-                >
-                Acerca de mí
-                </v-btn>
-                <v-btn
-                @click="$UIEvents.emit('pageSelected','gallery')"
-                small
-                plain
-                depressed
-                class="mx-1"
-                >
-                Galería
-                </v-btn>
-                <v-btn
-                @click="$UIEvents.emit('pageSelected','contact')"
-                small
-                plain
-                depressed
-                class="mx-1 text-center"
-                >
-                ¡Contáctame!
-                </v-btn>
-            </template>
+    <v-layout>
+        <v-row >
+            <v-card
+                class="d-inline-flex pa-2 my-3 justify-center align-center delay" 
+                :class="activeToolbarClass"
+                tile
+            >
+                <!--Navigation Mode-->
+                <template>
+                    <span>
+                    <span
+                    class="text-center text-body-1 mx-5 justify-center"
+                    style="min-width: 20em;"
+                    >
+                    GERALDO VALDÉZ FOTOGRAFÍA
+                    </span>
+                    <br v-show="isSmallScreen">
+                    <v-btn
+                    @click="$UIEvents.emit('pageSelected','knowme')"
+                    small
+                    plain
+                    depressed
+                    class="mx-1"
+                    >
+                    Acerca de mí
+                    </v-btn>
+                    <v-btn
+                    @click="$UIEvents.emit('pageSelected','gallery')"
+                    small
+                    plain
+                    depressed
+                    class="mx-1"
+                    >
+                    Portafolio
+                    </v-btn>
+                    <v-btn
+                    @click="$UIEvents.emit('pageSelected','contact')"
+                    small
+                    plain
+                    depressed
+                    class="mx-1"
+                    >
+                    ¡Contáctame!
+                    </v-btn>
+                    </span>
+                </template>
 
-            <!--Toolbar mode-->
-            <template v-else>
-                <v-btn fab small color="blue">
-                    <v-icon>mdi-skip-backward</v-icon>
-                </v-btn>
-                <v-btn fab small color="blue">
-                    <v-icon >mdi-play</v-icon>
-                </v-btn>
-                <v-btn fab small color="blue"> 
-                    <v-icon >mdi-skip-forward</v-icon>
-                </v-btn>
-            </template>
-        </v-card>
-    </v-row>
+            </v-card>
+        </v-row>
+    </v-layout>
     </div>
 
 </template>
@@ -85,7 +78,7 @@ export default {
     methods:{
         openGallery(){
             this.galleryMode=true
-            this.activeToolbarClass="gallery-mode rounded-pill"
+            this.activeToolbarClass="gallery-mode"
             this.showCloseGalleryBtn = true;
         },
         closeGallery(){
@@ -93,13 +86,22 @@ export default {
             this.activeToolbarClass="navigation-mode"
             this.showCloseGalleryBtn = false;
         }
+    },
+    computed:{
+        isSmallScreen(){
+            if(this.$vuetify.breakpoint.name=="xs"){
+                return true
+            }else{
+                return false
+            }
+        }
     }
 }
 </script>
 
 <style scoped>
 .delay{
-    transition-property: width;
+    transition-property: opacity;
     transition-duration: 1s;
 }
 
@@ -107,18 +109,18 @@ export default {
     position: fixed; 
     bottom:0px;
     width: 70em;
+    left:50%;
+    transform: translate(-50%,0);
+    opacity: 100;
 }
 
 .gallery-mode{
-    position: fixed;
-    opacity: 0.5;
+    position: fixed; 
     bottom:0px;
+    width: 70em;
     left:50%;
-    width: 15em;
     transform: translate(-50%,0);
+    opacity: 0;
 }
 
-.gallery-mode:hover{
-    opacity:1
-}
 </style>
