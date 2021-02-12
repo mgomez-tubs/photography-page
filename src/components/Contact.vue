@@ -39,6 +39,12 @@ export default {
     },
     mounted(){
         this.show=true
+    },
+    methods:{
+        closeOverlay(){
+            this.$UIEvents.emit("pageSelected","home")
+        },
     }
+
 }
 </script>

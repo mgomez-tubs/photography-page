@@ -12,14 +12,13 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-import Background from './components/Background';
-import SocialButton from './components/SocialButton';
-import NavigationToolbar from './components/NavigationToolbar'
+import HelloWorld         from './components/HelloWorld';
+import Background         from './components/Background';
+import SocialButton       from './components/SocialButton';
+import NavigationToolbar  from './components/NavigationToolbar'
 
 export default {
   name: 'App',
-
   components: {
     HelloWorld,
     Background,
