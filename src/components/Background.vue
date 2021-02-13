@@ -2,14 +2,14 @@
     <!-- Previous/ Next buttons are only to be shown, when in Gallery mode -->
     <!-- Cycling stops when chosing Gallery Mode -->
     
-    <v-carousel :cycle="cycling" :show-arrows="showingArrows" hide-delimiters  interval="5000" style="position:fixed; top: 0px; z-index: 0" height="100%">
+    <v-carousel :show-arrows="showingArrows" hide-delimiters style="position:fixed; top: 0px;" height="100%">
         <v-carousel-item 
             v-for="foto in fotos_arr" :key="foto.id"
             reverse-transition="fade-transition"
             transition="fade-transition"
         >
-            <h1 style="position: fixed; bottom:0px; left:0px;z-index:2" v-show="showDescription" class="text-h3 ma-5 white--text">{{foto.title}}</h1>
             <v-img :src="foto.src" min-height="100%"/>
+            <h1 style="position: fixed; bottom:0px; left:0px" v-show="showDescription" class="text-h3 ma-5 white--text">{{foto.title}}</h1>
         </v-carousel-item>
     </v-carousel>
 </template>
@@ -35,7 +35,7 @@ export default {
                     title: 'A beautiful nature, Amazonas 1995',
                 }
             ],
-            cycling: true,
+            cycling: false,
             showingArrows: false,
             showDescription: false
         }
@@ -47,7 +47,7 @@ export default {
             this.showDescription = true;    
         });
         this.$UIEvents.on("galleryWasClosed", () =>{
-            this.cycling = true;
+            this.cycling = false;
             this.showingArrows = false;
             this.showDescription = false;
         });

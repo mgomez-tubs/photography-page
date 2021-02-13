@@ -36,50 +36,50 @@
                 <!--Navigation Mode-->
                 <template>
                     <span>
-                    <v-btn
-                    @click="$UIEvents.emit('pageSelected','home')"
-                    small
-                    plain
-                    depressed
-                    >
-                        <span
-                        class="text-center text-body-1 mx-5 justify-center"
-                        style="min-width: 20em;"
+                        <v-btn
+                        @click="$UIEvents.emit('pageSelected','home')"
+                        small
+                        plain
+                        depressed
                         >
-                        GERALDO VALDÉZ FOTOGRAFÍA
-                        </span>
-                    </v-btn>
+                            <span
+                            class="text-center text-body-1 mx-5 justify-center"
+                            style="min-width: 20em;"
+                            >
+                            GERALDO VALDÉZ FOTOGRAFÍA
+                            </span>
+                        </v-btn>
                     </span>
+
                     <span>
-                    <v-btn
-                    @click="$UIEvents.emit('pageSelected','knowme')"
-                    small
-                    plain
-                    depressed
-                    class="mx-1"
-                    >
-                    Acerca de mí
-                    </v-btn>
-                    <v-btn
-                    @click="$UIEvents.emit('pageSelected','gallery')"
-                    small
-                    plain
-                    depressed
-                    class="mx-1"
-                    >
-                    Galería
-                    </v-btn>
-                    <v-btn
-                    @click="$UIEvents.emit('pageSelected','contact')"
-                    small
-                    plain
-                    depressed
-                    class="mx-1"
-                    >
-                    ¡Contáctame!
-                    </v-btn>
+                        <v-btn
+                        @click="$UIEvents.emit('pageSelected','knowme')"
+                        small
+                        plain
+                        depressed
+                        class="mx-1"
+                        >
+                        Acerca de mí
+                        </v-btn>
+                        <v-btn
+                        @click="$UIEvents.emit('pageSelected','gallery')"
+                        small
+                        plain
+                        depressed
+                        class="mx-1"
+                        >
+                        Galería
+                        </v-btn>
+                        <v-btn
+                        @click="$UIEvents.emit('pageSelected','contact')"
+                        small
+                        plain
+                        depressed
+                        class="mx-1"
+                        >
+                        ¡Contáctame!
+                        </v-btn>
                     </span>
-                    
                 </template>
             </v-card>
         </v-row>

@@ -3,7 +3,7 @@
     style="background:none"
   >
     <v-main>
-      <Background/>
+      <Background app/>
       <HelloWorld/>
       <SocialButton/>
       <NavigationToolbar/>
