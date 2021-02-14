@@ -2,10 +2,10 @@
     <v-overlay z-index="0">
         <v-expand-transition>
             <v-card class="d-flex pa-5" color="yellow lighten-4" v-show="show">
-                <v-container fill-height fluid>
+                <v-container>
                     <v-row align="center" justify="center">
                         <v-col align="center" justify="center">
-                                <v-card class="pa-5" tile max-width="20em" elevation="10">
+                                <v-card class="pa-5" tile elevation="10">
                                 <h1>¡Contáctame!</h1>
                                 <br/>
                                 <p>Calle Pablo Iglesias 68<br/>

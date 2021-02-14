@@ -5,11 +5,12 @@
                 <v-card class="d-flex pa-2" elevation="10">
                     <v-img
                         src="../assets/picture.jpg"
-                        width="15em"/>
+                        width="20em"
+                        v-show="showProfilePicture"/>
                     <v-container fill-height fluid>
                         <v-row align="center" justify="center">
                             <v-col align="center" justify="center">
-                                    <v-card class="ma-2 pa-5" tile max-width="20em" elevation="10">
+                                    <v-card max-width="25em" class="ma-2 pa-5" tile elevation="10">
                                     <h1>Acerca de mí</h1>
                                     <br/>
                                     <p>¡Hola ahí! Soy Geraldo, un fotografo profesional madrileño con 15 años de experiencia. Desde pequeño estuve muy interesado en la fotografía.</p>
@@ -33,6 +34,15 @@ export default {
     },
     mounted(){
         this.show=true
+    },
+    computed:{
+        showProfilePicture(){
+            if(this.$vuetify.breakpoint.name=="xs"){
+                return false
+            }else{
+                return true
+            }
+        }
     }
 }
 </script>

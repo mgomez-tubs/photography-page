@@ -6,8 +6,8 @@
       <Background app/>
       <HelloWorld/>
       <SocialButton/>
-      <NavigationToolbar/>
     </v-main>
+      <NavigationToolbar app/>
   </v-app>
 </template>
 
