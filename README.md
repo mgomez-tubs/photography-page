@@ -1,4 +1,6 @@
-# personal_page_vuetify
+# Photography Page
+A simple SPA landing page experiment built with the intention of learning VueJS. 
+
 
 ## Project setup
 ```
