@@ -1,6 +1,11 @@
 # Photography Page
+
 A simple SPA landing page experiment built with the intention of learning VueJS. 
 
+<img src="./screenshots/0.png"/>
+<img src="./screenshots/1.png"/>
+<img src="./screenshots/2.png"/>
+<img src="./screenshots/3.png"/>
 
 ## Project setup
 ```
